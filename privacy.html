@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Bemny Studio</title>
-<meta name="description" content="What Bemny Studio does with access to a Google account, what it stores, and how to withdraw that access.">
+<meta name="description" content="What Bemny Studio does with access to Google, Facebook and Instagram accounts, what it stores, and how to withdraw that access and have it deleted.">
 <style>
   :root { --bg: #f7f5f0; --text: #1c2026; --muted: #5b6470; --accent: #0f766e; --rule: #dcd8ce; }
   @media (prefers-color-scheme: dark) { :root { --bg: #14181d; --text: #e9e6df; --muted: #9aa3ad; --accent: #5eead4; --rule: #2a3138; } }
@@ -13,8 +13,10 @@
   main { max-width: 680px; margin: 0 auto; padding: 72px 20px 56px; }
   h1 { font: 700 36px/1.15 "Segoe UI", system-ui, sans-serif; margin: 0 0 6px; letter-spacing: -0.5px; }
   h2 { font: 700 20px/1.3 "Segoe UI", system-ui, sans-serif; margin: 40px 0 8px; }
+  h3 { font: 700 17px/1.3 "Segoe UI", system-ui, sans-serif; margin: 24px 0 6px; }
   .lead { color: var(--muted); margin: 0 0 28px; }
-  a { color: var(--accent); }
+  a { color: var(--accent); overflow-wrap: anywhere; }
+  code { font-size: 15px; overflow-wrap: anywhere; }
   ul { padding-left: 22px; }
   li { margin: 6px 0; }
   footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--rule); color: var(--muted); font: 14px/1.6 "Segoe UI", system-ui, sans-serif; }
@@ -23,38 +25,52 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="lead">Bemny Studio · Last updated 13 October 2026</p>
+  <p class="lead">Bemny Studio · Last updated 20 October 2026</p>
 
-  <p>Bemny Studio is a private tool that Bemny Technologies uses to make videos and upload them to its own YouTube channels. It is not offered to the public. This policy explains what happens when a Google account is connected to it.</p>
+  <p>Bemny Studio is a private tool that Bemny Technologies uses to make videos and post them to its own YouTube channels, Facebook Pages and Instagram accounts. It is not offered to the public, and nobody outside Bemny Technologies signs in to it. This policy explains what happens when a Google, Facebook or Instagram account is connected to it.</p>
 
   <h2>What Bemny Studio asks for</h2>
+
+  <h3>Google and YouTube</h3>
   <p>When a YouTube channel is connected, Bemny Studio asks Google for one permission: to upload videos to that channel (the <code>youtube.upload</code> permission of the YouTube Data API). It uses that permission only to upload a video that a person has approved, with its title, description and tags, and to set that video's thumbnail.</p>
 
-  <h2>What it stores</h2>
+  <h3>Facebook and Instagram</h3>
+  <p>When Facebook Pages are connected, Bemny Studio asks Meta for these permissions, and uses them only as described:</p>
   <ul>
-    <li><strong>An access token from Google.</strong> After you give permission, Google issues a token that lets Bemny Studio upload to your channel. It is kept in a file on the computer Bemny Studio runs on, and nowhere else.</li>
-    <li><strong>A record of what it uploaded.</strong> For each video it uploads, it keeps the video's YouTube address and the time of the upload, on the same computer.</li>
+    <li><code>pages_show_list</code>, <code>business_management</code> and <code>pages_read_engagement</code>: to find our Pages and the Instagram accounts linked to them, and to read back a post's address and whether it has finished processing.</li>
+    <li><code>pages_manage_posts</code>: to post an approved video, its short clips and a set of picture slides to the Page they were made for.</li>
+    <li><code>instagram_basic</code> and <code>instagram_content_publish</code>: to post the short clips and the picture slides to the Instagram account linked to that Page.</li>
   </ul>
-  <p>It does not store your Google password, which it never sees, and it does not collect your name, email address, contacts, viewing history, comments or channel statistics.</p>
+  <p>Instagram takes pictures for a post only from a web address. So before slides are posted to Instagram, each is first placed on our own Facebook Page as a hidden photo that is not shown to anyone, which Facebook removes after a day.</p>
+
+  <h2>What it stores</h2>
+  <p>Everything below is kept in files on the one computer Bemny Studio runs on, and nowhere else.</p>
+  <ul>
+    <li><strong>Access tokens.</strong> After permission is given, Google and Meta issue tokens that let Bemny Studio post. For Facebook and Instagram it keeps each Page's token, the Page's name and ID, and the linked Instagram account's ID and username. The token for the person who signed in to Facebook is used once to find the Pages and is not kept.</li>
+    <li><strong>A record of what it posted.</strong> For each upload it keeps the post's address, its ID and the time it was posted.</li>
+  </ul>
+  <p>It never sees or stores a password. It does not collect names, email addresses, friends, followers, contacts, messages, comments, viewing history or statistics from any account.</p>
 
   <h2>What it does not do</h2>
   <ul>
-    <li>It does not read, change or delete existing videos, playlists, comments or account settings.</li>
-    <li>It does not share, sell or transfer anything from your Google account to anyone.</li>
-    <li>It does not use anything from your Google account for advertising, or to train artificial intelligence models.</li>
+    <li>It does not read, change or delete existing videos, posts, playlists, comments, messages or account settings.</li>
+    <li>It never posts anything until a person has approved the video and asked for it to be posted.</li>
+    <li>It does not share, sell or transfer anything from a connected account to anyone.</li>
+    <li>It does not use anything from a connected account for advertising, or to train artificial intelligence models.</li>
     <li>It has no analytics, tracking or cookies. This website has none either.</li>
   </ul>
 
-  <h2>Google's rules that apply</h2>
-  <p>Bemny Studio's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
-  <p>Bemny Studio uploads through YouTube API Services. By connecting a channel you also agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google's handling of your information is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <h2>Rules that apply</h2>
+  <p>Bemny Studio's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. It uploads through YouTube API Services: by connecting a channel you also agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google's handling of your information is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p>Its use of Facebook and Instagram follows Meta's <a href="https://developers.facebook.com/terms/">Platform Terms</a> and <a href="https://developers.facebook.com/devpolicy/">Developer Policies</a>. Meta's handling of your information is described in the <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>.</p>
 
   <h2>How to withdraw access and have data deleted</h2>
   <ul>
-    <li>You can withdraw Bemny Studio's access at any time on Google's security settings page: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Its token stops working at once.</li>
-    <li>To have the stored token and upload records deleted from our computer, write to the address below. They are deleted within seven days.</li>
+    <li><strong>Google:</strong> withdraw Bemny Studio's access on Google's security settings page, <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Its token stops working at once.</li>
+    <li><strong>Facebook and Instagram:</strong> remove Bemny Studio in Facebook's Settings, under Business integrations (or Apps and websites). Its tokens stop working at once.</li>
+    <li>To have the stored tokens and post records deleted, follow the steps on the <a href="data-deletion.html">data deletion page</a>. They are deleted within seven days.</li>
   </ul>
-  <p>Videos already uploaded stay on the YouTube channel until its owner removes them in YouTube.</p>
+  <p>Videos and posts already published stay on YouTube, Facebook and Instagram until the account's owner removes them there.</p>
 
   <h2>Changes to this policy</h2>
   <p>If this policy changes, the new version is posted on this page with a new date.</p>
@@ -62,7 +78,7 @@
   <h2>Contact</h2>
   <p>Bemny Technologies · <a href="mailto:dubemantony@gmail.com">dubemantony@gmail.com</a></p>
 
-  <footer>© 2026 Bemny Technologies · <a href="index.html">Bemny Studio</a></footer>
+  <footer>© 2026 Bemny Technologies · <a href="index.html">Bemny Studio</a> · <a href="data-deletion.html">Data deletion</a></footer>
 </main>
 </body>
 </html>
